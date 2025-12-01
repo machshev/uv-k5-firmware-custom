@@ -3,12 +3,12 @@
 IMAGE_NAME="uvk5"
 FIRMWARE_DIR="${PWD}/compiled-firmware"
 # Default: Alpine 3.21; you can pass BASE=alpine:3.22 / alpine:3.19 / alpine:edge
-BASE="${BASE:-alpine:3.21}"
+BASE="${BASE:-alpine:3.22}"
 
 # --- Derive the Alpine tag from BASE ---
 case "$BASE" in
   alpine:*)  ALPINE_TAG="${BASE#alpine:}";;
-  alpine)    ALPINE_TAG="3.21";;  # fallback if no tag provided
+  alpine)    ALPINE_TAG="3.22";;  # fallback if no tag provided
   *)
     echo "❌ BASE must be 'alpine:<tag>' (e.g., alpine:3.21, alpine:edge). Got: '$BASE'"
     exit 1
